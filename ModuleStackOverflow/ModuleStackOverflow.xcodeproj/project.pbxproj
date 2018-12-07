@@ -14,6 +14,10 @@
 		F802192A21BABB9C00170240 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F802192821BABB9C00170240 /* LaunchScreen.storyboard */; };
 		F802192D21BABB9C00170240 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F802192C21BABB9C00170240 /* main.m */; };
 		F802193721BABB9C00170240 /* ModuleStackOverflowTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F802193621BABB9C00170240 /* ModuleStackOverflowTests.m */; };
+		F802194621BABD8800170240 /* MSOServiceLocator.m in Sources */ = {isa = PBXBuildFile; fileRef = F802194521BABD8800170240 /* MSOServiceLocator.m */; };
+		F802194B21BABE9800170240 /* MSOOnlineProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = F802194A21BABE9800170240 /* MSOOnlineProvider.m */; };
+		F802194F21BAC19C00170240 /* MSOQuestion.m in Sources */ = {isa = PBXBuildFile; fileRef = F802194E21BAC19C00170240 /* MSOQuestion.m */; };
+		F802195321BACF1100170240 /* MSOQuestionFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = F802195221BACF1100170240 /* MSOQuestionFactory.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +44,17 @@
 		F802193221BABB9C00170240 /* ModuleStackOverflowTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ModuleStackOverflowTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F802193621BABB9C00170240 /* ModuleStackOverflowTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ModuleStackOverflowTests.m; sourceTree = "<group>"; };
 		F802193821BABB9C00170240 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F802194321BABC4A00170240 /* MSOServiceLocatorProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MSOServiceLocatorProtocol.h; sourceTree = "<group>"; };
+		F802194421BABD8800170240 /* MSOServiceLocator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MSOServiceLocator.h; sourceTree = "<group>"; };
+		F802194521BABD8800170240 /* MSOServiceLocator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MSOServiceLocator.m; sourceTree = "<group>"; };
+		F802194821BABE4400170240 /* MSOOnlineProviderProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MSOOnlineProviderProtocol.h; sourceTree = "<group>"; };
+		F802194921BABE9800170240 /* MSOOnlineProvider.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MSOOnlineProvider.h; sourceTree = "<group>"; };
+		F802194A21BABE9800170240 /* MSOOnlineProvider.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MSOOnlineProvider.m; sourceTree = "<group>"; };
+		F802194D21BAC19C00170240 /* MSOQuestion.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MSOQuestion.h; sourceTree = "<group>"; };
+		F802194E21BAC19C00170240 /* MSOQuestion.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MSOQuestion.m; sourceTree = "<group>"; };
+		F802195121BACF1100170240 /* MSOQuestionFactory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MSOQuestionFactory.h; sourceTree = "<group>"; };
+		F802195221BACF1100170240 /* MSOQuestionFactory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MSOQuestionFactory.m; sourceTree = "<group>"; };
+		F802195421BAD51E00170240 /* MSOQuestion+Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MSOQuestion+Private.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +96,10 @@
 		F802191C21BABB9B00170240 /* ModuleStackOverflow */ = {
 			isa = PBXGroup;
 			children = (
+				F802195021BACEEF00170240 /* Factories */,
+				F802194C21BAC0ED00170240 /* Models */,
+				F802194721BABE2100170240 /* OnlineProvider */,
+				F802194121BABC2300170240 /* Services */,
 				F802191D21BABB9B00170240 /* AppDelegate.h */,
 				F802191E21BABB9B00170240 /* AppDelegate.m */,
 				F802192021BABB9B00170240 /* ViewController.h */,
@@ -101,6 +120,53 @@
 				F802193821BABB9C00170240 /* Info.plist */,
 			);
 			path = ModuleStackOverflowTests;
+			sourceTree = "<group>";
+		};
+		F802194121BABC2300170240 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				F802194221BABC2C00170240 /* ServiceLocator */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		F802194221BABC2C00170240 /* ServiceLocator */ = {
+			isa = PBXGroup;
+			children = (
+				F802194321BABC4A00170240 /* MSOServiceLocatorProtocol.h */,
+				F802194421BABD8800170240 /* MSOServiceLocator.h */,
+				F802194521BABD8800170240 /* MSOServiceLocator.m */,
+			);
+			path = ServiceLocator;
+			sourceTree = "<group>";
+		};
+		F802194721BABE2100170240 /* OnlineProvider */ = {
+			isa = PBXGroup;
+			children = (
+				F802194821BABE4400170240 /* MSOOnlineProviderProtocol.h */,
+				F802194921BABE9800170240 /* MSOOnlineProvider.h */,
+				F802194A21BABE9800170240 /* MSOOnlineProvider.m */,
+			);
+			path = OnlineProvider;
+			sourceTree = "<group>";
+		};
+		F802194C21BAC0ED00170240 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F802194D21BAC19C00170240 /* MSOQuestion.h */,
+				F802194E21BAC19C00170240 /* MSOQuestion.m */,
+				F802195421BAD51E00170240 /* MSOQuestion+Private.h */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F802195021BACEEF00170240 /* Factories */ = {
+			isa = PBXGroup;
+			children = (
+				F802195121BACF1100170240 /* MSOQuestionFactory.h */,
+				F802195221BACF1100170240 /* MSOQuestionFactory.m */,
+			);
+			path = Factories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -204,8 +270,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				F802192221BABB9B00170240 /* ViewController.m in Sources */,
+				F802195321BACF1100170240 /* MSOQuestionFactory.m in Sources */,
 				F802192D21BABB9C00170240 /* main.m in Sources */,
+				F802194621BABD8800170240 /* MSOServiceLocator.m in Sources */,
 				F802191F21BABB9B00170240 /* AppDelegate.m in Sources */,
+				F802194B21BABE9800170240 /* MSOOnlineProvider.m in Sources */,
+				F802194F21BAC19C00170240 /* MSOQuestion.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
