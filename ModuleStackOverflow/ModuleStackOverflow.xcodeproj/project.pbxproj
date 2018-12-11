@@ -18,6 +18,7 @@
 		F802194B21BABE9800170240 /* MSOOnlineProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = F802194A21BABE9800170240 /* MSOOnlineProvider.m */; };
 		F802194F21BAC19C00170240 /* MSOQuestion.m in Sources */ = {isa = PBXBuildFile; fileRef = F802194E21BAC19C00170240 /* MSOQuestion.m */; };
 		F802195321BACF1100170240 /* MSOQuestionFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = F802195221BACF1100170240 /* MSOQuestionFactory.m */; };
+		F8249ACD21BE4E300067AC2C /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F8249ACB21BE4E300067AC2C /* Model.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		F802195121BACF1100170240 /* MSOQuestionFactory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MSOQuestionFactory.h; sourceTree = "<group>"; };
 		F802195221BACF1100170240 /* MSOQuestionFactory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MSOQuestionFactory.m; sourceTree = "<group>"; };
 		F802195421BAD51E00170240 /* MSOQuestion+Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MSOQuestion+Private.h"; sourceTree = "<group>"; };
+		F8249ACC21BE4E300067AC2C /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 		F802191C21BABB9B00170240 /* ModuleStackOverflow */ = {
 			isa = PBXGroup;
 			children = (
+				F8249AC921BE4CDA0067AC2C /* OfflineProvider */,
 				F802195021BACEEF00170240 /* Factories */,
 				F802194C21BAC0ED00170240 /* Models */,
 				F802194721BABE2100170240 /* OnlineProvider */,
@@ -167,6 +170,22 @@
 				F802195221BACF1100170240 /* MSOQuestionFactory.m */,
 			);
 			path = Factories;
+			sourceTree = "<group>";
+		};
+		F8249AC921BE4CDA0067AC2C /* OfflineProvider */ = {
+			isa = PBXGroup;
+			children = (
+				F8249ACA21BE4CE70067AC2C /* CoreData */,
+			);
+			path = OfflineProvider;
+			sourceTree = "<group>";
+		};
+		F8249ACA21BE4CE70067AC2C /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				F8249ACB21BE4E300067AC2C /* Model.xcdatamodeld */,
+			);
+			path = CoreData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -272,6 +291,7 @@
 				F802192221BABB9B00170240 /* ViewController.m in Sources */,
 				F802195321BACF1100170240 /* MSOQuestionFactory.m in Sources */,
 				F802192D21BABB9C00170240 /* main.m in Sources */,
+				F8249ACD21BE4E300067AC2C /* Model.xcdatamodeld in Sources */,
 				F802194621BABD8800170240 /* MSOServiceLocator.m in Sources */,
 				F802191F21BABB9B00170240 /* AppDelegate.m in Sources */,
 				F802194B21BABE9800170240 /* MSOOnlineProvider.m in Sources */,
@@ -368,7 +388,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -421,7 +441,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -472,6 +492,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = EXB62WLCJ2;
 				INFOPLIST_FILE = ModuleStackOverflowTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -491,6 +512,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = EXB62WLCJ2;
 				INFOPLIST_FILE = ModuleStackOverflowTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -534,6 +556,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		F8249ACB21BE4E300067AC2C /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				F8249ACC21BE4E300067AC2C /* Model.xcdatamodel */,
+			);
+			currentVersion = F8249ACC21BE4E300067AC2C /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = F802191221BABB9B00170240 /* Project object */;
 }
