@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14315.18" systemVersion="18B75" minimumToolsVersion="Automatic" sourceLanguage="Objective-C" userDefinedModelVersionIdentifier="">
-    <entity name="Answer" representedClassName="Answer" syncable="YES" codeGenerationType="class">
+    <entity name="Answer" representedClassName="Answer" syncable="YES">
         <attribute name="accepted" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="aswer_id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="awarded_bounty_amount" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
@@ -28,7 +28,7 @@
         <relationship name="question" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Question" inverseName="answers" inverseEntity="Question" syncable="YES"/>
         <relationship name="tags" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Tag" syncable="YES"/>
     </entity>
-    <entity name="Comment" representedClassName="Comment" syncable="YES" codeGenerationType="class">
+    <entity name="Comment" representedClassName="Comment" syncable="YES">
         <attribute name="body" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="comment_id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="creation_date" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
@@ -42,7 +42,7 @@
         <relationship name="question" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Question" inverseName="comments" inverseEntity="Question" syncable="YES"/>
         <relationship name="reply_to_user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Shallow_user" syncable="YES"/>
     </entity>
-    <entity name="Question" representedClassName="Question" syncable="YES" codeGenerationType="class">
+    <entity name="Question" representedClassName="Question" syncable="YES">
         <attribute name="accepted_answer_id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="answer_count" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="body" optional="YES" attributeType="String" syncable="YES"/>
@@ -83,7 +83,7 @@
         <relationship name="owner" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Shallow_user" inverseName="questions" inverseEntity="Shallow_user" syncable="YES"/>
         <relationship name="tags" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Tag" syncable="YES"/>
     </entity>
-    <entity name="Shallow_user" representedClassName="Shallow_user" syncable="YES" codeGenerationType="class">
+    <entity name="Shallow_user" representedClassName="Shallow_user" syncable="YES">
         <attribute name="accept_rate" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="display_name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="link" optional="YES" attributeType="String" syncable="YES"/>
@@ -95,14 +95,14 @@
         <relationship name="comments" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Comment" inverseName="owner" inverseEntity="Comment" syncable="YES"/>
         <relationship name="questions" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Question" inverseName="owner" inverseEntity="Question" syncable="YES"/>
     </entity>
-    <entity name="Tag" representedClassName="Tag" syncable="YES" codeGenerationType="class">
+    <entity name="Tag" representedClassName="Tag" syncable="YES">
         <attribute name="tag" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Question" positionX="-770.10546875" positionY="-23.5" width="128" height="630"/>
-        <element name="Answer" positionX="-566.7578125" positionY="-459.828125" width="128" height="435"/>
-        <element name="Shallow_user" positionX="-189.15625" positionY="-31.046875" width="128" height="195"/>
-        <element name="Comment" positionX="-36.26171875" positionY="46.96875" width="128" height="225"/>
-        <element name="Tag" positionX="-73.984375" positionY="719.703125" width="128" height="60"/>
+        <element name="Answer" positionX="-566.7578125" positionY="-459.828125" width="128" height="433"/>
+        <element name="Comment" positionX="-36.26171875" positionY="46.96875" width="128" height="223"/>
+        <element name="Question" positionX="-770.10546875" positionY="-23.5" width="128" height="628"/>
+        <element name="Shallow_user" positionX="-189.15625" positionY="-31.046875" width="128" height="193"/>
+        <element name="Tag" positionX="-73.984375" positionY="719.703125" width="128" height="58"/>
     </elements>
 </model>

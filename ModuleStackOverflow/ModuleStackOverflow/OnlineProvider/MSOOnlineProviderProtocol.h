@@ -6,6 +6,7 @@
 //  Copyright © 2018 Iskander Foatov. All rights reserved.
 //
 
+#import <Foundation/Foundation.h>
 @class MSOQuestion;
 
 

@@ -8,18 +8,20 @@
 
 #import "MSOServiceLocator.h"
 #import "MSOOnlineProvider.h"
+#import "MSODataBase.h"
 
 
 @interface MSOServiceLocator ()
 
 @property (nonatomic, strong) id<MSOOnlineProviderProtocol> onlineProvider;
+@property (nonatomic, strong) id<MSODataBaseProtocol> dataBase;
 
 @end
 
 
 @implementation MSOServiceLocator
 
-- (MSOServiceLocator *)shared
++ (MSOServiceLocator *)shared
 {
 	static MSOServiceLocator *serviceLocator = nil;
 	static dispatch_once_t onceToken;
@@ -27,6 +29,16 @@
 		serviceLocator = [MSOServiceLocator new];
 	});
 	return serviceLocator;
+}
+
+- (instancetype)init
+{
+	self = [super init];
+	if (self)
+	{
+		_dataBase = [[MSODataBase alloc] init];
+	}
+	return self;
 }
 
 - (id<MSOOnlineProviderProtocol>)onlineProvider
