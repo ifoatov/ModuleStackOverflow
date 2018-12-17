@@ -9,6 +9,8 @@
 #import "ViewController.h"
 #import "MSOQuestion.h"
 #import "MSOOnlineProvider.h"
+#import "MSOServiceLocator.h"
+#import "MSOServiceLocatorProtocol.h"
 
 @interface ViewController () <UITableViewDataSource>
 
@@ -28,12 +30,10 @@
 	[self.view addSubview:table];
 	self.tableView = table;
 	
-	
-	// just for test, then move in to Interactor
-//	id<MSOServiceLocatorProtocol> serviceLocator = [MSOServiceLocator shared];
-	MSOOnlineProvider *onlineProvider = [MSOOnlineProvider new];
+	id<MSOServiceLocatorProtocol> serviceLocator = [MSOServiceLocator shared];
+	id<MSOOnlineProviderProtocol> onlineProvider = serviceLocator.onlineProvider;
 	[onlineProvider getQuestionsWithTag:@"android"
-																  complition:^(NSString * _Nonnull tag, NSArray<MSOQuestion *> * _Nullable questions, NSError * _Nullable error) {
+							 complition:^(NSString * _Nonnull tag, NSArray<MSOQuestion *> * _Nullable questions, NSError * _Nullable error) {
 																	  dispatch_async(dispatch_get_main_queue(), ^{
 																		  self.items = questions;
 																		  [self.tableView reloadData];

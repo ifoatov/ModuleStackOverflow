@@ -10,14 +10,6 @@
 #import "MSOServiceLocatorProtocol.h"
 
 
-NS_ASSUME_NONNULL_BEGIN
-
-
-
 @interface MSOServiceLocator : NSObject <MSOServiceLocatorProtocol>
 
-- (MSOServiceLocator *)shared;
-
 @end
-
-NS_ASSUME_NONNULL_END
