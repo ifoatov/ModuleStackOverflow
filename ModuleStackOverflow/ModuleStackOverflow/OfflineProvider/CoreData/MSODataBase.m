@@ -33,10 +33,29 @@
 		
 		dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
 			NSFileManager *fileManager = [NSFileManager defaultManager];
-			NSURL *documentsUrl = [[fileManager URLsForDirectory:NSDocumentationDirectory inDomains:NSUserDomainMask] lastObject];
-			NSURL *storeURL = [documentsUrl URLByAppendingPathComponent:@"DataModel.sqlite"];
+			
+			NSString *moduleFolder = @"DataBase";
+			NSURL *documentsUrl = [[[fileManager URLsForDirectory:NSDocumentationDirectory inDomains:NSUserDomainMask] firstObject] URLByAppendingPathComponent:moduleFolder ];
 			
 			NSError *error = nil;
+			if (![fileManager fileExistsAtPath:documentsUrl.path])
+			{
+				if (![fileManager createDirectoryAtURL:documentsUrl withIntermediateDirectories:YES attributes:nil error:&error])
+				{
+					NSLog(@"Error while init database %@", error);
+					abort();
+				}
+				
+				if (![documentsUrl setResourceValue:@YES forKey:NSURLIsExcludedFromBackupKey error:&error])
+				{
+					NSLog(@"Error while init database %@", error);
+					abort();
+				}
+			}
+			
+			NSURL *storeURL = [documentsUrl URLByAppendingPathComponent:@"DataModel.sqlite"];
+			
+			
 			NSPersistentStore *persistentStore = [self.coordinator addPersistentStoreWithType:NSSQLiteStoreType
 																				configuration:nil
 																						  URL:storeURL
