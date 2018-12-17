@@ -37,7 +37,19 @@
 	
 	MSOQuestion *question = [MSOQuestion new];
 	
-	[question setQuestion_id:[question_id unsignedIntegerValue]];
+	question.question_id = [question_id unsignedIntegerValue];
+	question.title = dict[@"title"];
+	question.link = dict[@"link"];
+	question.creationDate = [NSDate dateWithTimeIntervalSince1970:[dict[@"creation_date"] unsignedIntegerValue]];
+	
+	question.lastActivityDate = [NSDate dateWithTimeIntervalSince1970:[dict[@"last_activity_date"] unsignedIntegerValue]];
+	question.answerCount = [dict[@"answer_count"] unsignedIntegerValue];
+	question.isAnswered = [dict[@"is_answered"] unsignedIntegerValue];
+	
+	if (question.isAnswered)
+	{
+		//TODO
+	}
 	
 	return question;
 }

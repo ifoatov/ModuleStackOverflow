@@ -18,6 +18,7 @@
 		F802194B21BABE9800170240 /* MSOOnlineProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = F802194A21BABE9800170240 /* MSOOnlineProvider.m */; };
 		F802194F21BAC19C00170240 /* MSOQuestion.m in Sources */ = {isa = PBXBuildFile; fileRef = F802194E21BAC19C00170240 /* MSOQuestion.m */; };
 		F802195321BACF1100170240 /* MSOQuestionFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = F802195221BACF1100170240 /* MSOQuestionFactory.m */; };
+		F8BE731621BC589E001837C0 /* MSOSearchQuestionListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8BE731521BC589E001837C0 /* MSOSearchQuestionListViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,8 @@
 		F802195121BACF1100170240 /* MSOQuestionFactory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MSOQuestionFactory.h; sourceTree = "<group>"; };
 		F802195221BACF1100170240 /* MSOQuestionFactory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MSOQuestionFactory.m; sourceTree = "<group>"; };
 		F802195421BAD51E00170240 /* MSOQuestion+Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MSOQuestion+Private.h"; sourceTree = "<group>"; };
+		F8BE731421BC589E001837C0 /* MSOSearchQuestionListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MSOSearchQuestionListViewController.h; sourceTree = "<group>"; };
+		F8BE731521BC589E001837C0 /* MSOSearchQuestionListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MSOSearchQuestionListViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +99,7 @@
 		F802191C21BABB9B00170240 /* ModuleStackOverflow */ = {
 			isa = PBXGroup;
 			children = (
+				F8BE730C21BC57BC001837C0 /* Modules */,
 				F802195021BACEEF00170240 /* Factories */,
 				F802194C21BAC0ED00170240 /* Models */,
 				F802194721BABE2100170240 /* OnlineProvider */,
@@ -167,6 +171,63 @@
 				F802195221BACF1100170240 /* MSOQuestionFactory.m */,
 			);
 			path = Factories;
+			sourceTree = "<group>";
+		};
+		F8BE730C21BC57BC001837C0 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				F8BE730D21BC57C7001837C0 /* SearchQuestionsList */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		F8BE730D21BC57C7001837C0 /* SearchQuestionsList */ = {
+			isa = PBXGroup;
+			children = (
+				F8BE731321BC5861001837C0 /* Router */,
+				F8BE731221BC5839001837C0 /* ViewModel */,
+				F8BE731121BC5831001837C0 /* Presentor */,
+				F8BE731021BC5829001837C0 /* Interactor */,
+				F8BE730F21BC5823001837C0 /* View */,
+			);
+			path = SearchQuestionsList;
+			sourceTree = "<group>";
+		};
+		F8BE730F21BC5823001837C0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F8BE731421BC589E001837C0 /* MSOSearchQuestionListViewController.h */,
+				F8BE731521BC589E001837C0 /* MSOSearchQuestionListViewController.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F8BE731021BC5829001837C0 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		F8BE731121BC5831001837C0 /* Presentor */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presentor;
+			sourceTree = "<group>";
+		};
+		F8BE731221BC5839001837C0 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		F8BE731321BC5861001837C0 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Router;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -269,6 +330,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F8BE731621BC589E001837C0 /* MSOSearchQuestionListViewController.m in Sources */,
 				F802192221BABB9B00170240 /* ViewController.m in Sources */,
 				F802195321BACF1100170240 /* MSOQuestionFactory.m in Sources */,
 				F802192D21BABB9C00170240 /* main.m in Sources */,
