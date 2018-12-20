@@ -6,13 +6,13 @@
 //  Copyright © 2018 Iskander Foatov. All rights reserved.
 //
 
-#import "MSOSearchQuestionListViewController.h"
+#import "MSOSearchQuestionsListViewController.h"
 
-@interface MSOSearchQuestionListViewController ()
+@interface MSOSearchQuestionsListViewController ()
 
 @end
 
-@implementation MSOSearchQuestionListViewController
+@implementation MSOSearchQuestionsListViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

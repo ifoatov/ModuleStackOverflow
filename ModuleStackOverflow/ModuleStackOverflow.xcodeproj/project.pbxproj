@@ -18,9 +18,14 @@
 		F802194B21BABE9800170240 /* MSOOnlineProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = F802194A21BABE9800170240 /* MSOOnlineProvider.m */; };
 		F802194F21BAC19C00170240 /* MSOQuestion.m in Sources */ = {isa = PBXBuildFile; fileRef = F802194E21BAC19C00170240 /* MSOQuestion.m */; };
 		F802195321BACF1100170240 /* MSOQuestionFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = F802195221BACF1100170240 /* MSOQuestionFactory.m */; };
-		F8BE731621BC589E001837C0 /* MSOSearchQuestionListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8BE731521BC589E001837C0 /* MSOSearchQuestionListViewController.m */; };
 		F8249ACD21BE4E300067AC2C /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F8249ACB21BE4E300067AC2C /* Model.xcdatamodeld */; };
 		F871F5CE21C3951F005E9FA2 /* MSODataBase.m in Sources */ = {isa = PBXBuildFile; fileRef = F871F5CD21C3951F005E9FA2 /* MSODataBase.m */; };
+		F8BE731621BC589E001837C0 /* MSOSearchQuestionsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8BE731521BC589E001837C0 /* MSOSearchQuestionsListViewController.m */; };
+		F8DB391121CBBFC600577E60 /* MSOSearchQuestionsListRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = F8DB391021CBBFC600577E60 /* MSOSearchQuestionsListRouter.m */; };
+		F8DB391621CBC04D00577E60 /* MSOSearchQuestionsListOnlineInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = F8DB391521CBC04D00577E60 /* MSOSearchQuestionsListOnlineInteractor.m */; };
+		F8DB391B21CBC10000577E60 /* MSOSearchQuestionsListPresentor.m in Sources */ = {isa = PBXBuildFile; fileRef = F8DB391A21CBC10000577E60 /* MSOSearchQuestionsListPresentor.m */; };
+		F8DB391F21CBC17400577E60 /* MSOSearchQuestionsListOfflineInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = F8DB391E21CBC17400577E60 /* MSOSearchQuestionsListOfflineInteractor.m */; };
+		F8DB392221CBC25A00577E60 /* MSOSearchQuestionsListFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = F8DB392121CBC25A00577E60 /* MSOSearchQuestionsListFactory.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,12 +63,25 @@
 		F802195121BACF1100170240 /* MSOQuestionFactory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MSOQuestionFactory.h; sourceTree = "<group>"; };
 		F802195221BACF1100170240 /* MSOQuestionFactory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MSOQuestionFactory.m; sourceTree = "<group>"; };
 		F802195421BAD51E00170240 /* MSOQuestion+Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MSOQuestion+Private.h"; sourceTree = "<group>"; };
-		F8BE731421BC589E001837C0 /* MSOSearchQuestionListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MSOSearchQuestionListViewController.h; sourceTree = "<group>"; };
-		F8BE731521BC589E001837C0 /* MSOSearchQuestionListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MSOSearchQuestionListViewController.m; sourceTree = "<group>"; };
 		F8249ACC21BE4E300067AC2C /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		F871F5CB21C393D6005E9FA2 /* MSODataBaseProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MSODataBaseProtocol.h; sourceTree = "<group>"; };
 		F871F5CC21C3951F005E9FA2 /* MSODataBase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MSODataBase.h; sourceTree = "<group>"; };
 		F871F5CD21C3951F005E9FA2 /* MSODataBase.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MSODataBase.m; sourceTree = "<group>"; };
+		F8BE731421BC589E001837C0 /* MSOSearchQuestionsListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MSOSearchQuestionsListViewController.h; sourceTree = "<group>"; };
+		F8BE731521BC589E001837C0 /* MSOSearchQuestionsListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MSOSearchQuestionsListViewController.m; sourceTree = "<group>"; };
+		F8DB390E21CBBFA700577E60 /* MSOSearchQuestionListRouterProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MSOSearchQuestionListRouterProtocol.h; sourceTree = "<group>"; };
+		F8DB391021CBBFC600577E60 /* MSOSearchQuestionsListRouter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MSOSearchQuestionsListRouter.m; sourceTree = "<group>"; };
+		F8DB391321CBC03400577E60 /* MSOSearchQuestionsListInteractorProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MSOSearchQuestionsListInteractorProtocol.h; sourceTree = "<group>"; };
+		F8DB391521CBC04D00577E60 /* MSOSearchQuestionsListOnlineInteractor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MSOSearchQuestionsListOnlineInteractor.m; sourceTree = "<group>"; };
+		F8DB391821CBC0DD00577E60 /* MSOSearchQuestionsListPresentorProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MSOSearchQuestionsListPresentorProtocol.h; sourceTree = "<group>"; };
+		F8DB391921CBC10000577E60 /* MSOSearchQuestionsListPresentor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MSOSearchQuestionsListPresentor.h; sourceTree = "<group>"; };
+		F8DB391A21CBC10000577E60 /* MSOSearchQuestionsListPresentor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MSOSearchQuestionsListPresentor.m; sourceTree = "<group>"; };
+		F8DB391C21CBC14E00577E60 /* MSOSearchQuestionsListOnlineInteractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSOSearchQuestionsListOnlineInteractor.h; sourceTree = "<group>"; };
+		F8DB391D21CBC17400577E60 /* MSOSearchQuestionsListOfflineInteractor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MSOSearchQuestionsListOfflineInteractor.h; sourceTree = "<group>"; };
+		F8DB391E21CBC17400577E60 /* MSOSearchQuestionsListOfflineInteractor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MSOSearchQuestionsListOfflineInteractor.m; sourceTree = "<group>"; };
+		F8DB392021CBC25A00577E60 /* MSOSearchQuestionsListFactory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MSOSearchQuestionsListFactory.h; sourceTree = "<group>"; };
+		F8DB392121CBC25A00577E60 /* MSOSearchQuestionsListFactory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MSOSearchQuestionsListFactory.m; sourceTree = "<group>"; };
+		F8DB392321CBC63500577E60 /* MSOSearchQuestionsListRouter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSOSearchQuestionsListRouter.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -210,11 +228,12 @@
 		F8BE730D21BC57C7001837C0 /* SearchQuestionsList */ = {
 			isa = PBXGroup;
 			children = (
-				F8BE731321BC5861001837C0 /* Router */,
-				F8BE731221BC5839001837C0 /* ViewModel */,
-				F8BE731121BC5831001837C0 /* Presentor */,
-				F8BE731021BC5829001837C0 /* Interactor */,
+				F8DB391721CBC09F00577E60 /* Presentor */,
+				F8DB391221CBBFFB00577E60 /* Interactor */,
+				F8DB390D21CBBF8A00577E60 /* Router */,
 				F8BE730F21BC5823001837C0 /* View */,
+				F8DB392021CBC25A00577E60 /* MSOSearchQuestionsListFactory.h */,
+				F8DB392121CBC25A00577E60 /* MSOSearchQuestionsListFactory.m */,
 			);
 			path = SearchQuestionsList;
 			sourceTree = "<group>";
@@ -222,38 +241,42 @@
 		F8BE730F21BC5823001837C0 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				F8BE731421BC589E001837C0 /* MSOSearchQuestionListViewController.h */,
-				F8BE731521BC589E001837C0 /* MSOSearchQuestionListViewController.m */,
+				F8BE731421BC589E001837C0 /* MSOSearchQuestionsListViewController.h */,
+				F8BE731521BC589E001837C0 /* MSOSearchQuestionsListViewController.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
 		};
-		F8BE731021BC5829001837C0 /* Interactor */ = {
+		F8DB390D21CBBF8A00577E60 /* Router */ = {
 			isa = PBXGroup;
 			children = (
+				F8DB390E21CBBFA700577E60 /* MSOSearchQuestionListRouterProtocol.h */,
+				F8DB392321CBC63500577E60 /* MSOSearchQuestionsListRouter.h */,
+				F8DB391021CBBFC600577E60 /* MSOSearchQuestionsListRouter.m */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		F8DB391221CBBFFB00577E60 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				F8DB391321CBC03400577E60 /* MSOSearchQuestionsListInteractorProtocol.h */,
+				F8DB391C21CBC14E00577E60 /* MSOSearchQuestionsListOnlineInteractor.h */,
+				F8DB391521CBC04D00577E60 /* MSOSearchQuestionsListOnlineInteractor.m */,
+				F8DB391D21CBC17400577E60 /* MSOSearchQuestionsListOfflineInteractor.h */,
+				F8DB391E21CBC17400577E60 /* MSOSearchQuestionsListOfflineInteractor.m */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";
 		};
-		F8BE731121BC5831001837C0 /* Presentor */ = {
+		F8DB391721CBC09F00577E60 /* Presentor */ = {
 			isa = PBXGroup;
 			children = (
+				F8DB391821CBC0DD00577E60 /* MSOSearchQuestionsListPresentorProtocol.h */,
+				F8DB391921CBC10000577E60 /* MSOSearchQuestionsListPresentor.h */,
+				F8DB391A21CBC10000577E60 /* MSOSearchQuestionsListPresentor.m */,
 			);
 			path = Presentor;
-			sourceTree = "<group>";
-		};
-		F8BE731221BC5839001837C0 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		F8BE731321BC5861001837C0 /* Router */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Router;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -356,13 +379,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F8BE731621BC589E001837C0 /* MSOSearchQuestionListViewController.m in Sources */,
+				F8DB391F21CBC17400577E60 /* MSOSearchQuestionsListOfflineInteractor.m in Sources */,
+				F8BE731621BC589E001837C0 /* MSOSearchQuestionsListViewController.m in Sources */,
 				F802192221BABB9B00170240 /* ViewController.m in Sources */,
 				F802195321BACF1100170240 /* MSOQuestionFactory.m in Sources */,
 				F802192D21BABB9C00170240 /* main.m in Sources */,
+				F8DB391B21CBC10000577E60 /* MSOSearchQuestionsListPresentor.m in Sources */,
 				F871F5CE21C3951F005E9FA2 /* MSODataBase.m in Sources */,
 				F8249ACD21BE4E300067AC2C /* Model.xcdatamodeld in Sources */,
 				F802194621BABD8800170240 /* MSOServiceLocator.m in Sources */,
+				F8DB392221CBC25A00577E60 /* MSOSearchQuestionsListFactory.m in Sources */,
+				F8DB391121CBBFC600577E60 /* MSOSearchQuestionsListRouter.m in Sources */,
+				F8DB391621CBC04D00577E60 /* MSOSearchQuestionsListOnlineInteractor.m in Sources */,
 				F802191F21BABB9B00170240 /* AppDelegate.m in Sources */,
 				F802194B21BABE9800170240 /* MSOOnlineProvider.m in Sources */,
 				F802194F21BAC19C00170240 /* MSOQuestion.m in Sources */,
