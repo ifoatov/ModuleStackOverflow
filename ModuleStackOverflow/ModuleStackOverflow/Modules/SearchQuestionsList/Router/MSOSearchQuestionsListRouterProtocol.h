@@ -1,5 +1,5 @@
 //
-//  MSOSearchQuestionListRouterProtocol.h
+//  MSOSearchQuestionsListRouterProtocol.h
 //  ModuleStackOverflow
 //
 //  Created by Iskander Foatov on 20/12/2018.
@@ -8,7 +8,7 @@
 
 @class UIViewController;
 
-@protocol MSOSearchQuestionListRouterProtocol
+@protocol MSOSearchQuestionsListRouterProtocol
 
 
 @end

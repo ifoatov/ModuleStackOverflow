@@ -6,6 +6,13 @@
 //  Copyright © 2018 Iskander Foatov. All rights reserved.
 //
 
+@protocol MSOSearchQuestionsListPresentorProtocol;
+
+
 @protocol MSOSearchQuestionsListInteractorProtocol
+
+@property (nonatomic, strong) id<MSOSearchQuestionsListPresentorProtocol> presentor;
+
+- (void)getQuestionsWithTag:(NSString *)tag;
 
 @end

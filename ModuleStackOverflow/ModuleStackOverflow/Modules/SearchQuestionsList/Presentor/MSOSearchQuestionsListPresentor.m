@@ -7,7 +7,15 @@
 //
 
 #import "MSOSearchQuestionsListPresentor.h"
+#import "MSOSearchQuestionListViewInputProtocol.h"
 
 @implementation MSOSearchQuestionsListPresentor
+
+@synthesize view;
+
+- (void)addQuestions:(NSArray *)result
+{
+	[self.view updateWithQuestions:result];
+}
 
 @end

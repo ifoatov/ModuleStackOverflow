@@ -7,10 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "MSOSearchQuestionsListPresentorProtocol.h"
+
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface MSOSearchQuestionsListPresentor : NSObject
+
+@interface MSOSearchQuestionsListPresentor : NSObject <MSOSearchQuestionsListPresentorProtocol>
 
 @end
 

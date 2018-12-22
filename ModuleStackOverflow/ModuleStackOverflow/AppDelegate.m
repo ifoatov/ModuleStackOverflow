@@ -6,17 +6,30 @@
 //  Copyright © 2018 Iskander Foatov. All rights reserved.
 //
 
+@import UIKit;
 #import "AppDelegate.h"
+#import "MSOSearchQuestionsListFactory.h"
+
 
 @interface AppDelegate ()
 
 @end
+
 
 @implementation AppDelegate
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 	// Override point for customization after application launch.
+	
+	
+	self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+	
+	UIViewController *viewController = [MSOSearchQuestionsListFactory onlineModule];
+//	UINavigationController *navigationController =[[UINavigationController alloc] initWithRootViewController:viewController];
+	self.window.rootViewController = viewController;
+	[self.window makeKeyAndVisible];
+	
 	return YES;
 }
 

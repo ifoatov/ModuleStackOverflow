@@ -7,13 +7,13 @@
 //
 
 @import Foundation;
-#import "MSOSearchQuestionListRouterProtocol.h"
+#import "MSOSearchQuestionsListRouterProtocol.h"
 
 
 NS_ASSUME_NONNULL_BEGIN
 
 
-@interface MSOSearchQuestionsListRouter : NSObject <MSOSearchQuestionListRouterProtocol>
+@interface MSOSearchQuestionsListRouter : NSObject <MSOSearchQuestionsListRouterProtocol>
 
 
 

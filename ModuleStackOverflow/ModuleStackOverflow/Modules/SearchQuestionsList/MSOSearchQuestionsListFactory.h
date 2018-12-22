@@ -11,9 +11,12 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+
 @interface MSOSearchQuestionsListFactory : NSObject
 
 + (UIViewController *)onlineModule;
+
++ (UIViewController *)offlineModule;
 
 @end
 

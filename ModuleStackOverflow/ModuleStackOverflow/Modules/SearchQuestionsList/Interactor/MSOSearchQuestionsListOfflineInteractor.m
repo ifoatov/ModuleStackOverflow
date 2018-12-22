@@ -8,6 +8,14 @@
 
 #import "MSOSearchQuestionsListOfflineInteractor.h"
 
+
 @implementation MSOSearchQuestionsListOfflineInteractor
+
+@synthesize presentor;
+
+- (void)getQuestionsWithTag:(NSString *)tag
+{
+	
+}
 
 @end

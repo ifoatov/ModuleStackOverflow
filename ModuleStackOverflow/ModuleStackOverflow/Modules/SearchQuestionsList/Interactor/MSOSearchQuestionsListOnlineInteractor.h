@@ -9,11 +9,15 @@
 #import <Foundation/Foundation.h>
 #import "MSOSearchQuestionsListInteractorProtocol.h"
 
+@protocol MSOOnlineProviderProtocol;
+
 
 NS_ASSUME_NONNULL_BEGIN
 
 
 @interface MSOSearchQuestionsListOnlineInteractor : NSObject <MSOSearchQuestionsListInteractorProtocol>
+
+- (instancetype)initWithProvider:(id<MSOOnlineProviderProtocol>)provider;
 
 @end
 
