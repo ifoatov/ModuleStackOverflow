@@ -8,6 +8,7 @@
 
 #import "MSOSearchQuestionsListPresentor.h"
 #import "MSOSearchQuestionListViewInputProtocol.h"
+#import "MSOQuestionViewModel.h"
 
 @implementation MSOSearchQuestionsListPresentor
 
@@ -15,7 +16,13 @@
 
 - (void)addQuestions:(NSArray *)result
 {
-	[self.view updateWithQuestions:result];
+	NSMutableArray<MSOQuestionViewModel *> *viewModels = [NSMutableArray array];
+	for(MSOQuestion *question in result)
+	{
+		MSOQuestionViewModel *viewModel = [[MSOQuestionViewModel alloc] initWithQuestion:question];
+		[viewModels addObject:viewModel];
+	}
+	[self.view updateWithQuestions:[viewModels copy]];
 }
 
 @end

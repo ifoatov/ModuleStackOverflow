@@ -8,14 +8,16 @@
 
 #import "MSOQuestionTableViewCell.h"
 #import "MSOQuestion.h"
+#import "MSOTableItemViewModelProtocol.h"
+#import "MSOQuestionViewModel.h"
 
 
 @implementation MSOQuestionTableViewCell
 
-- (void)setupWithQuestion:(MSOQuestion *)question
+- (void)configureWithViewModel:(MSOQuestionViewModel *)viewModel
 {
 	[self reset];
-	
+	MSOQuestion *question = viewModel.question;
 	self.titleLabel.text = question.title;
 	
 	if (question.score > 0)

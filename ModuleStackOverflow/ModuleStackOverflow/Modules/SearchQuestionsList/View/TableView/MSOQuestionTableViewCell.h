@@ -7,23 +7,22 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MSOTableManagerCellProtocol.h"
 
 
 @class MSOQuestion;
+@protocol MSOTableItemViewModelProtocol;
 
 
 NS_ASSUME_NONNULL_BEGIN
 
 
-@interface MSOQuestionTableViewCell : UITableViewCell
+@interface MSOQuestionTableViewCell : UITableViewCell <MSOTableManagerCellProtocol>
 
 @property (weak, nonatomic) IBOutlet UILabel *voutesLabel;
 @property (weak, nonatomic) IBOutlet UILabel *answersLaber;
 @property (weak, nonatomic) IBOutlet UILabel *viewsLabel;
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
-
-
-- (void)setupWithQuestion:(MSOQuestion *)question;
 
 @end
 

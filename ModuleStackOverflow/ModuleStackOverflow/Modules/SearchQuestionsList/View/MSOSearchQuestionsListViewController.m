@@ -10,19 +10,22 @@
 #import "MSOSearchQuestionsListRouterProtocol.h"
 #import "MSOSearchQuestionsListInteractorProtocol.h"
 #import "MSOQuestionTableViewCell.h"
+#import "MSOTableManager.h"
+#import "MSOTableItemViewModelProtocol.h"
 
 
 static CGFloat textFieldHeight = 30;
 //static CGFloat favoritesViewHeight = 80;
-static NSString * const tableViewReusableKey = @"tableViewReusableKey";
+//static NSString * const tableViewReusableKey = @"tableViewReusableKey";
 
 
-@interface MSOSearchQuestionsListViewController () <UITextFieldDelegate, UITableViewDelegate, UITableViewDataSource>
+@interface MSOSearchQuestionsListViewController () <UITextFieldDelegate>
 
 @property (nonatomic, assign) CGFloat topMargin;
 @property (nonatomic, strong) UITextField *textField;
 @property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, strong) NSMutableArray<MSOQuestion *> *items;
+@property (nonatomic, strong) MSOTableManager *tableManager;
 
 @end
 
@@ -66,9 +69,9 @@ static NSString * const tableViewReusableKey = @"tableViewReusableKey";
 	CGRect frame = CGRectMake(0, yPosition, width, height);
 	
 	self.tableView = [[UITableView alloc] initWithFrame:frame style:UITableViewStylePlain];
-	self.tableView.delegate = self;
-	self.tableView.dataSource = self;
-	[self.tableView registerNib:[UINib nibWithNibName:@"MSOQuestionTableViewCell" bundle:nil] forCellReuseIdentifier:tableViewReusableKey];
+	[self.tableView registerNib:[UINib nibWithNibName:@"MSOQuestionTableViewCell" bundle:nil] forCellReuseIdentifier:@"MSOQuestionViewModelKey"];
+	
+	self.tableManager = [[MSOTableManager alloc] initWithTableView:self.tableView];
 	
 	[self.view addSubview:self.tableView];
 }
@@ -90,37 +93,9 @@ static NSString * const tableViewReusableKey = @"tableViewReusableKey";
 
 #pragma mark - ViewInputProtocol
 
-- (void)updateWithQuestions:(NSArray<MSOQuestion *> *)questions
+- (void)updateWithQuestions:(NSArray<id<MSOTableItemViewModelProtocol>> *)questions
 {
-	NSInteger count = self.items.count;
-	[self.items addObjectsFromArray:questions];
-	[self.tableView beginUpdates];
-	for (NSUInteger i = 0; i<questions.count; i++)
-	{
-		NSIndexPath *path = [NSIndexPath indexPathForRow:(count + i) inSection:0];
-		[self.tableView insertRowsAtIndexPaths:@[path] withRowAnimation:UITableViewRowAnimationBottom];
-	}
-	[self.tableView endUpdates];
-}
-
-
-#pragma mark - UITableViewDataSource, UITableViewDelegate
-
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
-	return 1;
-}
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
-	return self.items.count;
-}
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-	MSOQuestionTableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:tableViewReusableKey];
-	[cell setupWithQuestion:self.items[indexPath.row]];
-	return cell;
+	[self.tableManager addItems:questions];
 }
 
 @end

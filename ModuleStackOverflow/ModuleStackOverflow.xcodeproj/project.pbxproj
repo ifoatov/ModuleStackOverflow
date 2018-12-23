@@ -21,6 +21,8 @@
 		F89B851221CE786D00E48B90 /* MSOQuestionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F89B851021CE786D00E48B90 /* MSOQuestionTableViewCell.m */; };
 		F89B851321CE786D00E48B90 /* MSOQuestionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F89B851121CE786D00E48B90 /* MSOQuestionTableViewCell.xib */; };
 		F89B851621CE806700E48B90 /* MSOSearchQuestionsListInteractorFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = F89B851521CE806700E48B90 /* MSOSearchQuestionsListInteractorFactory.m */; };
+		F89B851B21CED63900E48B90 /* MSOTableManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F89B851A21CED63900E48B90 /* MSOTableManager.m */; };
+		F89B852421CEE0F100E48B90 /* MSOQuestionViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F89B852321CEE0F100E48B90 /* MSOQuestionViewModel.m */; };
 		F8BE731621BC589E001837C0 /* MSOSearchQuestionsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8BE731521BC589E001837C0 /* MSOSearchQuestionsListViewController.m */; };
 		F8DB391121CBBFC600577E60 /* MSOSearchQuestionsListRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = F8DB391021CBBFC600577E60 /* MSOSearchQuestionsListRouter.m */; };
 		F8DB391621CBC04D00577E60 /* MSOSearchQuestionsListOnlineInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = F8DB391521CBC04D00577E60 /* MSOSearchQuestionsListOnlineInteractor.m */; };
@@ -71,6 +73,13 @@
 		F89B851121CE786D00E48B90 /* MSOQuestionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MSOQuestionTableViewCell.xib; sourceTree = "<group>"; };
 		F89B851421CE806700E48B90 /* MSOSearchQuestionsListInteractorFactory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MSOSearchQuestionsListInteractorFactory.h; sourceTree = "<group>"; };
 		F89B851521CE806700E48B90 /* MSOSearchQuestionsListInteractorFactory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MSOSearchQuestionsListInteractorFactory.m; sourceTree = "<group>"; };
+		F89B851921CED63900E48B90 /* MSOTableManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MSOTableManager.h; sourceTree = "<group>"; };
+		F89B851A21CED63900E48B90 /* MSOTableManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MSOTableManager.m; sourceTree = "<group>"; };
+		F89B851C21CED6B100E48B90 /* MSOTableManagerProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MSOTableManagerProtocol.h; sourceTree = "<group>"; };
+		F89B851D21CED7AB00E48B90 /* MSOTableItemViewModelProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MSOTableItemViewModelProtocol.h; sourceTree = "<group>"; };
+		F89B851E21CED8FF00E48B90 /* MSOTableManagerCellProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MSOTableManagerCellProtocol.h; sourceTree = "<group>"; };
+		F89B852221CEE0F100E48B90 /* MSOQuestionViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MSOQuestionViewModel.h; sourceTree = "<group>"; };
+		F89B852321CEE0F100E48B90 /* MSOQuestionViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MSOQuestionViewModel.m; sourceTree = "<group>"; };
 		F8BE731421BC589E001837C0 /* MSOSearchQuestionsListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MSOSearchQuestionsListViewController.h; sourceTree = "<group>"; };
 		F8BE731521BC589E001837C0 /* MSOSearchQuestionsListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MSOSearchQuestionsListViewController.m; sourceTree = "<group>"; };
 		F8DB390E21CBBFA700577E60 /* MSOSearchQuestionsListRouterProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MSOSearchQuestionsListRouterProtocol.h; sourceTree = "<group>"; };
@@ -127,6 +136,7 @@
 		F802191C21BABB9B00170240 /* ModuleStackOverflow */ = {
 			isa = PBXGroup;
 			children = (
+				F89B851721CED60500E48B90 /* Managers */,
 				F8BE730C21BC57BC001837C0 /* Modules */,
 				F8249AC921BE4CDA0067AC2C /* OfflineProvider */,
 				F802195021BACEEF00170240 /* Factories */,
@@ -183,11 +193,7 @@
 		F802194C21BAC0ED00170240 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				F802195121BACF1100170240 /* MSOQuestionFactory.h */,
-				F802195221BACF1100170240 /* MSOQuestionFactory.m */,
-				F802194D21BAC19C00170240 /* MSOQuestion.h */,
-				F802194E21BAC19C00170240 /* MSOQuestion.m */,
-				F802195421BAD51E00170240 /* MSOQuestion+Private.h */,
+				F89B851F21CEE09900E48B90 /* Question */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -228,6 +234,47 @@
 			path = TableView;
 			sourceTree = "<group>";
 		};
+		F89B851721CED60500E48B90 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				F89B851821CED61000E48B90 /* TableManager */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		F89B851821CED61000E48B90 /* TableManager */ = {
+			isa = PBXGroup;
+			children = (
+				F89B851921CED63900E48B90 /* MSOTableManager.h */,
+				F89B851A21CED63900E48B90 /* MSOTableManager.m */,
+				F89B851C21CED6B100E48B90 /* MSOTableManagerProtocol.h */,
+				F89B851D21CED7AB00E48B90 /* MSOTableItemViewModelProtocol.h */,
+				F89B851E21CED8FF00E48B90 /* MSOTableManagerCellProtocol.h */,
+			);
+			path = TableManager;
+			sourceTree = "<group>";
+		};
+		F89B851F21CEE09900E48B90 /* Question */ = {
+			isa = PBXGroup;
+			children = (
+				F802195121BACF1100170240 /* MSOQuestionFactory.h */,
+				F802195221BACF1100170240 /* MSOQuestionFactory.m */,
+				F802194D21BAC19C00170240 /* MSOQuestion.h */,
+				F802194E21BAC19C00170240 /* MSOQuestion.m */,
+				F802195421BAD51E00170240 /* MSOQuestion+Private.h */,
+			);
+			path = Question;
+			sourceTree = "<group>";
+		};
+		F89B852121CEE0D400E48B90 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				F89B852221CEE0F100E48B90 /* MSOQuestionViewModel.h */,
+				F89B852321CEE0F100E48B90 /* MSOQuestionViewModel.m */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		F8BE730C21BC57BC001837C0 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
@@ -252,6 +299,7 @@
 		F8BE730F21BC5823001837C0 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				F89B852121CEE0D400E48B90 /* ViewModels */,
 				F89B850E21CE782900E48B90 /* TableView */,
 				F8BE731421BC589E001837C0 /* MSOSearchQuestionsListViewController.h */,
 				F8BE731521BC589E001837C0 /* MSOSearchQuestionsListViewController.m */,
@@ -404,9 +452,11 @@
 				F871F5CE21C3951F005E9FA2 /* MSODataBase.m in Sources */,
 				F8249ACD21BE4E300067AC2C /* Model.xcdatamodeld in Sources */,
 				F802194621BABD8800170240 /* MSOServiceLocator.m in Sources */,
+				F89B852421CEE0F100E48B90 /* MSOQuestionViewModel.m in Sources */,
 				F8DB392221CBC25A00577E60 /* MSOSearchQuestionsListFactory.m in Sources */,
 				F8DB391121CBBFC600577E60 /* MSOSearchQuestionsListRouter.m in Sources */,
 				F8DB391621CBC04D00577E60 /* MSOSearchQuestionsListOnlineInteractor.m in Sources */,
+				F89B851B21CED63900E48B90 /* MSOTableManager.m in Sources */,
 				F802191F21BABB9B00170240 /* AppDelegate.m in Sources */,
 				F802194B21BABE9800170240 /* MSOOnlineProvider.m in Sources */,
 				F802194F21BAC19C00170240 /* MSOQuestion.m in Sources */,

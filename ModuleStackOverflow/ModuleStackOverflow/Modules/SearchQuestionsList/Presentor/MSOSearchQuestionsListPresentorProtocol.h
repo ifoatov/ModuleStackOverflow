@@ -7,12 +7,13 @@
 //
 
 @protocol MSOSearchQuestionListViewInputProtocol;
+@class MSOQuestion;
 
 
 @protocol MSOSearchQuestionsListPresentorProtocol
 
 @property (nonatomic, weak) id<MSOSearchQuestionListViewInputProtocol> view;
 
-- (void)addQuestions:(NSArray *)result;
+- (void)addQuestions:(NSArray<MSOQuestion *> *)result;
 
 @end
